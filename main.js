@@ -23,7 +23,7 @@ function ttos(){
     symth.speak(speech)
 }
 console.log(ml5.version)
-var classifier= ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/UM9AI1pk4/model,json",modelLoaded)
+var classifier= ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/UM9AI1pk4/model.json",modelLoaded)
 
 function modelLoaded(){
     console.log("modelLoaded")
