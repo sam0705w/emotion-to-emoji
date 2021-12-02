@@ -40,6 +40,30 @@ else if(results){
     console.log(results)
     document.getElementById("result_emotion_name").innerHTML=results[0].label
     document.getElementById("result_emotion_name_2").innerHTML=results[1].label
-    prediction_1=result_emotion_name
+    prediction_1=results[0].label
+    prediction_2=results[1].label
+    ttos()
+    if(prediction_1=="happy"){
+        document.getElementById("emo").innerHTML="&#128522;"
+    }
+    if(prediction_2=="happy"){
+        document.getElementById("emo_2").innerHTML="&#128522;"
+    } 
+    
+    if(prediction_1=="sad"){
+        document.getElementById("emo").innerHTML="&#128532;"
+    }
+
+    if(prediction_2=="sad"){
+        document.getElementById("emo_2").innerHTML="&#128532;"
+    }
+
+    if(prediction_1=="Angry"){
+        document.getElementById("emo").innerHTML="&#128548;"
+    }
+
+    if(prediction_1=="Angry"){
+        document.getElementById("emo_2").innerHTML="&#128548;"
+    }
 }
 }
