@@ -28,3 +28,18 @@ var classifier= ml5.imageClassifier("https://teachablemachine.withgoogle.com/mod
 function modelLoaded(){
     console.log("modelLoaded")
 }
+function cam(){
+var img=document.getElementById("capture_img")
+classifier.classify(img,gotResults)
+}
+function gotResults(error,results){
+if(error){
+    console.log(error)
+}
+else if(results){
+    console.log(results)
+    document.getElementById("result_emotion_name").innerHTML=results[0].label
+    document.getElementById("result_emotion_name_2").innerHTML=results[1].label
+    prediction_1=result_emotion_name
+}
+}
