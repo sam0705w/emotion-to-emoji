@@ -12,7 +12,7 @@ var camera=document.getElementById("camera")
 Webcam.attach("#camera")
 
 function capture(){
-    Webcam.snap(function(data_uri){document.getElementById("result").innerHTML="<img src="+data_uri+">"})
+    Webcam.snap(function(data_uri){document.getElementById("result").innerHTML="<img id='capture_img' src="+data_uri+">"})
 }
 
 function ttos(){
